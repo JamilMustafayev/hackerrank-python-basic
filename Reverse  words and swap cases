@@ -1,0 +1,20 @@
+
+def reverse_words_order_and_swap_cases(sentence):
+    # Write your code here
+    word=sentence.split(" ")
+    word=word[::-1]
+    d=" ".join(word)
+    return d.swapcase()
+    
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    sentence = input()
+
+    result = reverse_words_order_and_swap_cases(sentence)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
