@@ -1,0 +1,23 @@
+
+def missingCharacters(s):
+    # Write your code here
+    set1=set("0123456789")
+    set2=set('abcdefghijklmnopqrstuvwxyz')
+    s=set(s.lower())
+    
+    z1=sorted(set1-s)
+    a1=sorted(set2-s)
+    d="".join(z1+a1)
+    return d
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = missingCharacters(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
